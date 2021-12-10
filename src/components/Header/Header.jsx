@@ -18,7 +18,7 @@ function Header() {
     await firebase.firestore().collection('newsletter').add({
         email: email
     }).then(() => {
-        toast.success('Email cadastrado com sucesso! Em breve você receberá um email de confirmação')
+        toast.info('Email cadastrado com sucesso! Em breve você receberá um email de confirmação')
     }).catch(error => {
         console.log(error)
         toast.error('Ops. Falha ao cadastrar o e-mail')
